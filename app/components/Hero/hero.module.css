@@ -1,0 +1,23 @@
+.heroSection{
+    margin-top: 5rem;
+    width: 100%;
+    min-height: 70vh;
+    background: url('../../assets/header_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.heroText{
+    text-align: center;
+    color: var(--color-gray-200);
+    max-width: 800px;
+    margin-top: 140px;
+    letter-spacing: 2px;
+}
+.heroPara{
+    max-width: 780px;
+    font-weight: 400;
+    font-size: 35px;
+}

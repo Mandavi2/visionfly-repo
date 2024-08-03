@@ -1,0 +1,57 @@
+.portfolioSection{
+    margin-top: 3rem;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.catbtn{
+    color: var(--color-gray-800);
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.btn.catBtn:hover{
+    transform: translateY(0);
+}
+.projects{
+    margin: 3rem 3.5rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    
+}
+.project{
+    display: flex;
+    gap: 1rem;
+    
+}
+.image{
+    width: 100%;
+    height: fit-content;
+    background: var(--color-gray-0);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.content{
+    padding: 1.5rem;
+}
+.project p{
+    margin: 0.5rem 0 1rem;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--color-gray-200);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+}
+.btn.primary{
+    background: var(--color-primary);
+    color: white;
+}

@@ -1,0 +1,14 @@
+.section{
+    margin-top: 2rem;
+}
+.offerImages{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.offerImage{
+    height:400px;
+    width:650px;
+    
+}

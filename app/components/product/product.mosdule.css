@@ -1,0 +1,25 @@
+.portfolioSection{
+    margin-top: 3rem;
+}
+
+.catbtn{
+    color: var(--color-gray-800);
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.btn.catBtn:hover{
+    transform: translateY(0);
+}
+.projectCategories{
+    display: flex;
+    gap: 2rem;
+}
+
+.productLine{
+    margin: 3rem 3.5rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,57 @@
+
+.mySwiper{
+    width: 1200px;
+    margin-bottom: 4rem;
+}
+.sliderContainer{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.sliderCard{
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    height: fit-content;
+    transition: all 0.2s ease;
+}
+.sliderCard:hover{
+    border: 2px solid var(--color-primary);
+    transform: translateY(-0.2rem);
+}
+.counName{
+    margin-top: 0.8rem;
+    font-size: 25px;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+.timePara{
+    margin-top: 1rem;
+    background-color: #388C21;
+    padding: 0.4rem 0.4rem;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-gray-0);
+}
+.pIcon{
+    transform: translateY(2.5px);
+}
+.pInclude{
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+.lowContent{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.lowerRight{
+    padding: 0.7rem 0.9rem;
+    align-items: center;
+    background: var(--color-primary);
+    color: var(--color-gray-0);
+    border-radius: 5px;
+}
+

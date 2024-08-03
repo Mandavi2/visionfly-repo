@@ -1,0 +1,32 @@
+.nav{
+    width: 100vw;
+    height: 5rem;
+    background: white;
+    border-bottom: 1px solid var(--color-gray-200);
+    display:grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.navContainer{
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+.navItems :hover{
+    cursor: pointer;
+    color: #028680;
+}
+
+.searchBox{
+    display: flex;
+    align-items: center;
+}

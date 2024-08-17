@@ -1,0 +1,112 @@
+.tripSection{
+    background: #F5F5F5;
+}
+.tripHead{
+    padding-top: 4rem;
+}
+.clientTabsBtns{
+    display: flex;
+    justify-content: center;
+    margin: 3.8rem 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.clientBtn{
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background:#E9E9E9;
+    border-radius: 10px;
+    color: #797676;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.clientActiveBtn{
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #DEF2D9;
+  color: #388C21;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.activeTripList{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 2rem 8rem;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.tripList{
+    display: none;
+}
+.tripCard{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1rem;
+    width: fit-content;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+.clientIcon{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+}
+.destBar{
+    width: 120px;
+    height: 10px;
+    margin-top: 0.8rem;
+    position: absolute;
+    top: 8.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.cardContent h4{
+    color: #3d3d3d;
+}
+.cardContent p{
+    color: #3D3D3D;
+}
+
+@media screen and (max-width:600px){
+    .activeTripList{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0rem;
+        gap: 1rem;
+        padding-bottom: 3rem;
+        align-items: center;
+    }
+    .clientIcon{
+        width: 140px;
+        height: 120px;
+    }
+    .cardContent{
+        gap: 0.7rem;
+    }
+    .tripCard{
+        gap: 2rem;
+        padding: 1rem 1.4rem;
+        width: fit-content;
+    }
+    .tripHead{
+        padding-top: 4rem;
+        font-size: 24px;
+    }
+    .tripSubHeading{
+        margin-top: -3rem;
+        font-size: 26px;
+    }
+    .destBar{
+        top: 7.2rem;
+    }
+}

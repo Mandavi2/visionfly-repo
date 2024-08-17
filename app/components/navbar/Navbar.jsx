@@ -1,11 +1,14 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import styles from './navbar.module.css'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineSearch } from "react-icons/md";
 import Link from 'next/link';
 import Image from 'next/image'
 import Logo_white from '../../assets/logo-final.png'
-
+import { FaBars } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 
 const data = [
     { id:1, link:'/',caption: 'Home'},
@@ -15,6 +18,20 @@ const data = [
     { id:5, link:'/contact',caption: 'Contact'}
 ]
 const Navbar = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() =>{
+    if(window.innerWidth > 600){
+      setNavOpen(true);
+    }
+  }, [navOpen])
+
+  const closeNavHandler = () =>{
+    if(window.innerWidth <= 600){
+      setNavOpen(false);
+    }
+  }
+
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.navContainer}`}>
@@ -28,21 +45,22 @@ const Navbar = () => {
                 className={styles.navLogo}
               />
         </Link>
-         <ul className={styles.navItems}>
+         { navOpen && <ul className={styles.navItems}>
            {
             data.map(({id, link, caption, icon})=>
                 <li key={id}>
-                    <Link href={link}>{caption}{icon}</Link>
+                    <Link href={link} onClick={closeNavHandler}>{caption}{icon}</Link>
                 </li>
             )
            }
-         </ul>
+         </ul>}
          <div className={styles.searchBox}>
             <input type="text" placeholder='Search...' />
             <a href='#'>
-            <i><MdOutlineSearch /></i>
+            <span className={styles.searchIcon}><MdOutlineSearch /></span>
             </a>
          </div>
+         <div className={styles.navBtn} onClick={() => setNavOpen(!navOpen)}>{ navOpen? <AiOutlineClose /> : <FaBars />}</div>
       </div>
     </nav>
   )

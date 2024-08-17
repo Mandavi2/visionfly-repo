@@ -1,11 +1,10 @@
 
 .mySwiper{
     width: 1200px;
-    margin-bottom: 4rem;
 }
 .sliderContainer{
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 .sliderCard{
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
@@ -13,10 +12,22 @@
     border-radius: 10px;
     height: fit-content;
     transition: all 0.2s ease;
+    position: relative;
 }
 .sliderCard:hover{
     border: 2px solid var(--color-primary);
     transform: translateY(-0.2rem);
+}
+.tagBox{
+    padding: 0.4rem 0.6rem;
+    background: red;
+    color: white;
+    width: fit-content;
+    font-size: 16px;
+    font-weight:500;
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
 .counName{
     margin-top: 0.8rem;
@@ -54,4 +65,47 @@
     color: var(--color-gray-0);
     border-radius: 5px;
 }
+.btnContainer{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+.prevBtn, .nextBtn{
+    font-size: 30px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+.slideBar{
+    width: 120px;
+    height: 10px;
+    margin-top: 0.8rem;
+    position: absolute;
+    top: 4.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+@media screen and (max-width:600px){
+    .sliderContainer{
+        display: flex;
+        justify-content: center;
+    }
+    .mySwiper{
+     width: 500px;
+    }
+    .sliderCard{
+     padding: 20px 22px;
+    }
+    .slideBar{
+        top: 3.3rem;
+    }
+    .sliderHeading{
+        font-size: 24px;
+    }
+    .sliderSubHeading{
+        margin-top: -3.1rem;
+        font-size: 26px;
+    }
+}

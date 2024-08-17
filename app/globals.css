@@ -86,8 +86,18 @@ h6{
   transition: var(--transiton);
 }
 .btn.primary{
-  background: var(--color-primary);
-  color: white;
+  background: #DEF2D9;
+  color: #388C21;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.nBtn{
+  background:#E9E9E9;
+  border-radius: 10px;
+  color: #797676;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .btn.sm{

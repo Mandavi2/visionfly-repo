@@ -2,28 +2,56 @@
 
 import styles from './slider.module.css'
 import {data} from './data'
+import left_arrow from '../../assets/left-arrow.png'
+import right_arrow from '../../assets/right-arrow.png'
 import Image from 'next/image'
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import slider_line from "../../assets/orange-line.png"
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
-
 
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+
+
 const Slider = () => {
+  const reelswiperRef = useRef(null);
+
+  const nextSlide = () =>{
+    reelswiperRef.current.slideNext();
+  }
+
+  const prevSlide = () =>{
+    reelswiperRef.current.slidePrev();
+  }
   return (
     <section className={styles.section}>
-       <p>Special Offers</p>
-       <h2>Hot Selling Destinations</h2>
+       <p className={styles.sliderHeading}>Special Offers</p>
+       <h2 className={styles.sliderSubHeading}>Hot Selling Destinations</h2>
+       <Image
+        src={slider_line}
+        alt='icon'
+        loading='lazy'
+        width={60}
+        height={60}
+        className={styles.slideBar}
+        />
         
        <Swiper
-        slidesPerView={4}
+
+          onSwiper={(swiper) =>{
+          reelswiperRef.current = swiper;
+        }}
+        slidesPerView={1}
         spaceBetween={30}
+        breakpoints={{
+          601:{slidesPerView:1},
+          1024:{slidesPerView:4}
+        }}
         pagination={{
           clickable: true,
         }}
@@ -31,16 +59,17 @@ const Slider = () => {
         className={styles.mySwiper}
       >
         {
-            data.map(({id,image,name,icon, time, text, start, price, cta}) =>
+            data.map(({id,tag,image,name,icon, time, text, start, price, cta}) =>
                 <SwiperSlide key={id} classname={styles.slideWrapper}>
                 <div className={styles.sliderContainer}>
                 <div className={styles.sliderCard}>
+                <h6 className={styles.tagBox}>{tag}</h6>
                 <Image
                   src={image}
                   alt="spot"
                   loading="lazy"
-                  width={80}
-                  height={60}
+                  width={180}
+                  height={140}
                   className={styles.photoCard}
                   
                 />
@@ -64,8 +93,29 @@ const Slider = () => {
         }
       </Swiper>
       <div className={styles.btnContainer}>
-        <div className={styles.prevBtn}></div>
-        <div className={styles.nextBtn}></div>
+        <div className={styles.prevBtn} onClick={prevSlide}>
+        <Image
+                  src={left_arrow}
+                  alt="spot"
+                  loading="lazy"
+                  width={45}
+                  height={45}
+                  className={styles.arrowImage}
+                  
+                />
+        </div>
+
+        <div className={styles.nextBtn} onClick={nextSlide}>
+        <Image
+                  src={right_arrow}
+                  alt="spot"
+                  loading="lazy"
+                  width={45}
+                  height={45}
+                  className={styles.arrowImage}
+                  
+                />
+        </div>
       </div>
     </section>
   )

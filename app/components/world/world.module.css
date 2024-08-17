@@ -1,0 +1,95 @@
+.worldSection{
+    background: #E6EAED;
+}
+.worldContainer{
+    margin-top: 2rem;
+    display: flex;
+    gap: 100px;
+}
+.leftContainer{
+    flex-basis: 1;
+    margin-left: 8rem;
+}
+.rightContainer{
+    flex-basis: 1;
+}
+
+.subHeading{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background: #FECF00;
+    padding: 0.8rem 1rem;
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.iconOne{
+    width: 20px;
+    height: 20px;
+}
+.paraHeading{
+    display: flex;
+    gap: 15px;
+}
+.paraTitle{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contentWrapper{
+    margin-top: 2rem;
+}
+.dotLine, .dotLineOne{
+    height: 40px;
+    width: 5px;
+    border-left: 4px dotted #FECF00;
+}
+.paraContent{
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 15px;
+    width: 580px;
+}
+
+.worldPhoto{
+    margin-top: 4rem;
+    width: 600px;
+    height: 600px;
+}
+.orange{
+    width: 120px;
+    height: 10px;
+    margin-top: 0.8rem;
+}
+@media screen and (max-width:600px){
+    .worldContainer{
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .leftContainer{
+        flex-basis: 0;
+        margin-left: 1.4rem;
+    }
+    .paraText{
+        font-size: 14px;
+        width: 400px;
+    }
+    .dotLine{
+        height: 50px;
+        width: 4px;
+    }
+    .dotLineOne{
+        height: 40px;
+        width: 4px;
+    }
+    .worldPhoto{
+        margin-top: 2rem;
+        width: 500px;
+        height: 500px;
+    }
+    .orange{
+        width: 100px;
+        height: 8px;
+        margin-top: 0.3rem;
+    }
+}

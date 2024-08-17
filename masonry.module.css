@@ -1,0 +1,44 @@
+.masonImage{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.photoName{
+    margin-top: -1rem;
+    color: var(--color-gray-0);
+    margin-left: 2rem;
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+.photoTravel{
+    margin-top: -5rem;
+    color: #EB662B;
+    margin-left: 2rem;
+    font-size: 18px;
+}
+.masonTitle{
+    margin-bottom: 2rem;
+}
+.masonHeader{
+    padding-top: 3rem;
+}
+.masonBar{
+    width: 120px;
+    height: 10px;
+    margin-top: 0.8rem;
+    position: absolute;
+    top: 8.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.colImages{
+    margin-bottom: 3rem;
+}
+@media screen and (max-width:600px){
+    .masonBar{
+        width: 100px;
+        height: 8px;
+        top: 6.3rem;
+    }
+}
